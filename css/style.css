@@ -1,0 +1,156 @@
+/* Fonts */
+
+
+
+/* Variables */
+
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --basic-bluedarken: #293449;
+  --basic-bluedark: #32425C;
+  --basic-black: #000000;
+
+  --white: #FFFFFF;
+
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --special-blackblue: #161D29;
+  --special-blackblueactive: #1D2739;
+
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --light-grey: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EAEAEA;
+}
+
+/* Global */
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Logo */
+
+.main-header-logo {
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+.main-header-logo:active {
+  background-color: var(--error);
+}
+
+/* Header */
+
+.main-header {
+  min-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.0001);
+}
+
+.top-menu {
+  background-color: var(--basic-bluedarken);
+}
+
+.top-menu a{
+  font-size: 18px;
+  color: var(--white);
+}
+
+.top-menu-link:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--special-blackblue);
+}
+
+.button-order {
+  background-color: var(--basic-green);
+}
+
+.button-order:hover {
+  background-color: var(--success);
+}
+
+.button-order:active {
+  background-color: var(--basic-green);
+}
+
+.company-description {
+  font-style: italic;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.main-header-contacts-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.main-header-contacts p {
+  font-size: 14px;
+  color: var(--basic-bluedark);
+}
+
+.login a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.login a:hover {
+  color: var(--basic-red);
+}
+
+.login a:active {
+  color: var(--basic-greylight);
+}
+
+/* Main navigation */
+
+.main-navigation {
+  background-color: var(--basic-bluedark);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.site-navigation li:hover {
+  background-color: var(--basic-bluedarken);
+}
+
+.site-navigation li:active {
+  background-color: var(--special-blackblueactive);
+}
+
+.site-navigation a:active {
+  opacity: 0.5;
+}
