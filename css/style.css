@@ -1,29 +1,27 @@
 /* Fonts */
 
-
-
 /* Variables */
 
 :root {
   --basic-red: #EE3643;
   --basic-green: #63A63E;
   --basic-grey: #3D546F;
+  --basic-greymid: #A9A9A9;
   --basic-greylight: #C5C5C5;
   --basic-background: #F1F5F7;
   --basic-bluedarken: #293449;
   --basic-bluedark: #32425C;
   --basic-black: #000000;
-
+  --basic-cream: #F9F5F0;
   --white: #FFFFFF;
-
   --special-yellow: #FFBF47;
+  --special-yellowed: #FFC047;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
   --special-blackblue: #161D29;
   --special-blackblueactive: #1D2739;
-
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
@@ -74,7 +72,7 @@ img {
   background-color: var(--basic-bluedarken);
 }
 
-.top-menu a{
+.top-menu a {
   font-size: 18px;
   color: var(--white);
 }
@@ -153,4 +151,158 @@ img {
 
 .site-navigation a:active {
   opacity: 0.5;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.feature-item a {
+  background-color: var(--white);
+  opacity: 0.3;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.materials {
+  background-color: var(--special-yellow);
+}
+
+.tool {
+  background-color: var(--special-blue);
+}
+
+.technics {
+  background-color: var(--special-lilac);
+}
+
+.sale {
+  background-color: var(--special-greenlight);
+}
+
+.delivery {
+  background-color: var(--special-yellowed);
+}
+
+/* Разобраться, как сделать текст внутри ссылки непрозрачным
+.feature-item span {
+  color: var(--white);
+}
+*/
+
+.slider-caption {
+  background-color: #dad6d6;
+  /* Временный фон, удалить */
+}
+
+.slider-caption {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.slider-caption span {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: initial;
+}
+
+.slider-item a {
+  background-color: var(--basic-red);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.popular-products h2 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-bluedark);
+}
+
+.button {
+  background-color: var(--basic-red);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.button-all-goods {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.popular-products-list {
+  list-style: none;
+}
+
+.popular-products-item-caption {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.popular-products-item-old-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: var(--basic-greymid);
+}
+
+.button-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.popular-manufacturers h2 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-bluedark);
+}
+
+.button-all-manufacturers {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.popular-manufacturers-list {
+  list-style: none;
+}
+
+.popular-manufacturers-item {
+  background-color: var(--white);
 }
