@@ -8,6 +8,7 @@
   --basic-grey: #3D546F;
   --basic-greymid: #A9A9A9;
   --basic-greylight: #C5C5C5;
+  --basic-greylighten: #F3F7F9;
   --basic-background: #F1F5F7;
   --basic-bluedarken: #293449;
   --basic-bluedark: #32425C;
@@ -20,8 +21,12 @@
   --special-lilac: #DC91D8;
   --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
+  --special-blackenblue: #212A3A;
   --special-blackblue: #161D29;
   --special-blackblueactive: #1D2739;
+  --special-greylight: #F4F4F4;
+  --special-red-hover: #CA2C37;
+  --special-red-active: #BA2732;
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
@@ -112,6 +117,8 @@ img {
   color: var(--basic-bluedark);
 }
 
+/* Login */
+
 .login a {
   font-size: 21px;
   line-height: 21px;
@@ -153,6 +160,8 @@ img {
   opacity: 0.5;
 }
 
+/* Features */
+
 .features-list {
   list-style: none;
 }
@@ -165,13 +174,20 @@ img {
 }
 
 .feature-item a {
-  background-color: var(--white);
-  opacity: 0.3;
+  background-color: rgba(255, 255, 255, 0.3);
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--white);
+}
+
+.feature-item a:hover {
+  background-color: var(--basic-greylight);
+}
+
+.feature-item a:active {
+  background-color: var(--basic-greymid);
 }
 
 .materials {
@@ -194,11 +210,9 @@ img {
   background-color: var(--special-yellowed);
 }
 
-/* Разобраться, как сделать текст внутри ссылки непрозрачным
-.feature-item span {
-  color: var(--white);
-}
-*/
+/* Разобраться, как сделать текст внутри ссылки непрозрачным, не используя rgba */
+
+/* Slider */
 
 .slider-caption {
   background-color: #dad6d6;
@@ -220,13 +234,23 @@ img {
   text-transform: initial;
 }
 
-.slider-item a {
+.button-open-catalog {
   background-color: var(--basic-red);
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--white);
 }
+
+.button-open-catalog:hover {
+  background-color: var(--special-red-hover);
+}
+
+.button-open-catalog:active {
+  background-color: var(--special-red-active);
+}
+
+/* Popular products */
 
 .popular-products h2 {
   font-family: Cuprum;
@@ -237,6 +261,14 @@ img {
   text-transform: uppercase;
   color: var(--basic-bluedark);
 }
+
+.popular-products-item {
+  background-color: var(--white);
+}
+
+/*.popular-products-item:hover {
+  Добавить тень и показать кнопки при наведении
+}*/
 
 .button {
   background-color: var(--basic-red);
@@ -252,6 +284,8 @@ img {
 .popular-products-list {
   list-style: none;
 }
+
+/*Разобраться, как сделать, чтобы появлялись кнопки при наведении*/
 
 .popular-products-item-caption {
   font-family: 'PT Sans', Arial, sans-serif;
@@ -281,6 +315,8 @@ img {
   line-height: 18px;
 }
 
+/* Popular manufacturers */
+
 .popular-manufacturers h2 {
   font-family: Cuprum;
   font-style: normal;
@@ -303,6 +339,246 @@ img {
   list-style: none;
 }
 
+/*Разобраться, что за фильтр применяется при нажатии (прозрачность?)*/
+
 .popular-manufacturers-item {
   background-color: var(--white);
+}
+
+/*.popular-manufacturers-item:hover {
+  Добавить тень при наведении
+}*/
+
+.popular-manufacturers-item:active {
+  background-color: rgba(0, 0, 0, 0.0001);
+  color: rgba(0, 0, 0, 0.0001);
+}
+
+/* Services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.services h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.services-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.services-list-links {
+  list-style: none;
+}
+
+/*.services-list-item {}*/
+
+.services-list-item a {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: var(--basic-bluedark);
+  color: var(--white);
+}
+
+.services-list-item a:hover {
+  background-color: var(--basic-bluedarken);
+}
+
+.services-list-item a:active {
+  background-color: var(--white);
+  color: var(--basic-bluedark);
+}
+
+.service-item h3 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-bluedark);
+}
+
+.service-item p {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+/* Contacts */
+
+.contacts-about h3 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.contacts-about p {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.transport-item {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.contacts-map h3 {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.contacts-map p {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: var(--basic-bluedark);
+}
+
+.main-footer-logo {
+  background-color: var(--basic-red);
+  color: var(--white);
+}
+
+.footer-navigation a {
+  color: var(--basic-background);
+}
+
+.main-footer-contacts {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-greylighten);
+}
+
+.main-footer-contacts-phone {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-greylighten);
+}
+
+.main-footer-menu-list {
+  list-style: none;
+}
+
+.main-footer-menu-list a {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--special-yellowlight);
+}
+
+.main-footer-bottom {
+  background-color: var(--basic-bluedarken);
+}
+
+.main-footer-bottom-copyright {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.main-footer-bottom-socials a {
+  background-color: var(--special-blackenblue);
+}
+
+.main-footer-bottom-feedback, .main-footer-bottom-developed {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.main-footer-bottom-feedback a, .main-footer-bottom-developed a {
+  color: var(--special-yellowlight);
+}
+
+/*.feedback-form {}*/
+
+.feedback-form label {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.feedback-form-field {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-greymid);
+  resize: none;
+}
+
+.footer-site-navigation {
+  list-style: none;
+}
+
+.footer-site-navigation a {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background);
+}
+
+.footer-site-navigation a:hover, .main-footer-menu-list a:hover {
+  text-decoration: underline;
 }

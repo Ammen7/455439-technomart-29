@@ -55,9 +55,8 @@
       <ul class="features-list">
         <li class="feature-item materials">
           Материалы
-          <a href="#"></a>
-          <!--Разобраться, как сделать текст непрозрачным-->
-          <span>На любой вкус</span>
+          <a href="#">На любой вкус</a>
+          <!--Разобраться, как сделать текст непрозрачным, не используя rgba-->
         </li>
         <li class="feature-item tool">
           Инструмент
@@ -84,7 +83,7 @@
             Перфораторы
             <span>Настоящие мужские игрушки</span>
           </p>
-          <a href="catalog.html">Открыть каталог</a>
+          <a class="button button-open-catalog" href="catalog.html">Открыть каталог</a>
         </div>
         <div class="slider-item">
           <img src="https://via.placeholder.com/620x266" width="620" height="266" alt="Дрели">
@@ -92,7 +91,7 @@
             Дрели
             <span>Соседям на радость!</span>
           </p>
-          <a href="catalog.html">Открыть каталог</a>
+          <a class="button button-open-catalog" href="catalog.html">Открыть каталог</a>
         </div>
       </div>
 
@@ -151,14 +150,14 @@
     </section>
     <section class="services">
       <h2>Сервисы</h2>
-      <p>
+      <p class="services-text">
         Хороший интернет-магазин отличается от плохого не только ценами! <br>
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
       </p>
-      <ul class="services-list-links">
-        <li class="services-item-link"><a href="#">Доставка</a></li>
-        <li class="services-item-link"><a href="#">Гарантия</a></li>
-        <li class="services-item-link"><a href="#">Кредит</a></li>
+      <ul class="services-list-links"> <!-- Разобраться, как открывать и скрывать эти окна -->
+        <li class="services-list-item"><a href="#">Доставка</a></li>
+        <li class="services-list-item"><a href="#">Гарантия</a></li>
+        <li class="services-list-item"><a href="#">Кредит</a></li>
       </ul>
       <div>
         <div class="service-item">
@@ -193,7 +192,7 @@
     <section class="contacts">
       <h2>О компании</h2>
       <div class="contacts-about">
-        <h3>КОМПАНИЯ "ТЕХНОМАРТ"</h3>
+        <h3>Компания "ТЕХНОМАРТ"</h3>
         <p>
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br> ремонта и строительства не оставит
           равнодушными любителей сэкономить на <br> гастарбайтерах.
@@ -210,7 +209,7 @@
         <a class="button" href="#">Подробнее о компании</a>
       </div>
       <div class="contacts-map">
-        <h3>КОНТАКТЫ</h3>
+        <h3>Контакты</h3>
         <p>
           Вы можете забрать товар сами, <br> заехав в наш офис:
         </p>
@@ -227,7 +226,7 @@
       ТЕХНОМАРТ
     </a>
     <nav class="main-footer-navigation">
-      <ul class="site-navigation">
+      <ul class="footer-site-navigation">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -267,20 +266,25 @@
       </p>
     </div>
   </footer>
-  <section class="modal feedback-form">
+  <section class="modal feedback-form"> <!--Разобраться, как открыть окно-->
     <h2>Форма обратной связи</h2>
     <form action="https://echo.htmlacademy.ru/courses" method="GET">
       <label for="name-field">Ваше имя:</label>
-      <input type="text" name="name" id="name-field" value="Имя Фамилия">
+      <input class="feedback-form-field" type="text" name="name" id="name-field" placeholder="Имя Фамилия">
       <label for="email-field">Ваш e-mail: </label>
-      <input type="text" name="email" id="email-field" value="email@example.com">
+      <input class="feedback-form-field" type="text" name="email" id="email-field" placeholder="email@example.com">
       <label for="message-field">Текст письма: </label>
-      <input type="text" name="message" id="message-field" value="В свободной форме">
+      <textarea class="feedback-form-field" name="message" id="message-field"
+        placeholder="В свободной форме"></textarea>
       <input class="button" type="submit">
     </form>
     <button class="feedback-form-button-close">Закрыть</button>
   </section>
-
+  <section class="modal map-popup">
+    <h2>Карта</h2>
+    <img src="https://via.placeholder.com/943x449" width="943" height="449" alt="Карта">
+    <button class="map-popup-button-close">Закрыть</button>
+  </section>
 </body>
 
 </html>
