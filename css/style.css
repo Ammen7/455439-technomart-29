@@ -10,6 +10,7 @@
   --basic-greylight: #C5C5C5;
   --basic-greylighten: #F3F7F9;
   --basic-background: #F1F5F7;
+  --basic-backgroundlight: #F2F6F8;
   --basic-bluedarken: #293449;
   --basic-bluedark: #32425C;
   --basic-black: #000000;
@@ -27,6 +28,7 @@
   --special-greylight: #F4F4F4;
   --special-red-hover: #CA2C37;
   --special-red-active: #BA2732;
+  --special-white-cuarto: rgba(0, 0, 0, 0.25);
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
@@ -70,7 +72,7 @@ img {
 
 .main-header {
   min-width: 1200px;
-  background-color: rgba(0, 0, 0, 0.0001);
+  background-color: var(--basic-greylighten);
 }
 
 .top-menu {
@@ -119,17 +121,54 @@ img {
 
 /* Login */
 
-.login a {
+.login-link, .registration-link {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
 }
 
-.login a:hover {
+.login-link:hover, .registration-link:hover {
   color: var(--basic-red);
 }
 
-.login a:active {
+.login-link:active, .registration-link:active {
+  color: var(--basic-greylight);
+}
+
+.login-user {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.login-user:hover {
+  color: var(--basic-black);
+}
+
+.login-user:active {
+  color: var(--basic-greylight);
+}
+
+.login-user-menu-item a {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-bluedark);
+}
+
+.login-user-menu-item a:hover {
+  color: var(--basic-red);
+}
+
+.login-user-menu-item a:active {
   color: var(--basic-greylight);
 }
 
@@ -210,13 +249,12 @@ img {
   background-color: var(--special-yellowed);
 }
 
-/* Разобраться, как сделать текст внутри ссылки непрозрачным, не используя rgba */
+/* TODO: Разобраться, как сделать текст внутри ссылки непрозрачным, не используя rgba */
 
 /* Slider */
 
 .slider-caption {
-  background-color: #dad6d6;
-  /* Временный фон, удалить */
+  background-color: var(--special-white-cuarto);
 }
 
 .slider-caption {
@@ -252,6 +290,10 @@ img {
 
 /* Popular products */
 
+.wrapper-cream-background {
+  background-color: var(--basic-cream);
+}
+
 .popular-products h2 {
   font-family: Cuprum;
   font-style: normal;
@@ -267,7 +309,7 @@ img {
 }
 
 /*.popular-products-item:hover {
-  Добавить тень и показать кнопки при наведении
+  TODO: Добавить тень и показать кнопки при наведении
 }*/
 
 .button {
@@ -285,7 +327,7 @@ img {
   list-style: none;
 }
 
-/*Разобраться, как сделать, чтобы появлялись кнопки при наведении*/
+/* TODO: Разобраться, как сделать, чтобы появлялись кнопки при наведении*/
 
 .popular-products-item-caption {
   font-family: 'PT Sans', Arial, sans-serif;
@@ -339,14 +381,14 @@ img {
   list-style: none;
 }
 
-/*Разобраться, что за фильтр применяется при нажатии (прозрачность?)*/
+/* TODO: Разобраться, что за фильтр применяется при нажатии (прозрачность?)*/
 
 .popular-manufacturers-item {
   background-color: var(--white);
 }
 
 /*.popular-manufacturers-item:hover {
-  Добавить тень при наведении
+  TODO: Добавить тень при наведении
 }*/
 
 .popular-manufacturers-item:active {
@@ -582,3 +624,21 @@ img {
 .footer-site-navigation a:hover, .main-footer-menu-list a:hover {
   text-decoration: underline;
 }
+
+/* Breadcrumbs */
+
+.heading {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  background-color: var(--basic-backgroundlight);
+  color: var(--basic-bluedark);
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs
