@@ -15,6 +15,7 @@
   --basic-bluedark: #32425C;
   --basic-black: #000000;
   --basic-cream: #F9F5F0;
+  --basic-beige: #F7F3EC;
   --white: #FFFFFF;
   --special-yellow: #FFBF47;
   --special-yellowed: #FFC047;
@@ -641,4 +642,147 @@ img {
   list-style: none;
 }
 
-.breadcrumbs
+.breadcrumbs li {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.filter h2 {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-beige);
+}
+
+.sort h2 {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.sort {
+  background-color: var(--basic-beige);
+}
+
+.sort-button {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-red);
+  border: none;
+  background-color: var(--basic-beige);
+}
+
+.visually-hidden {
+  display: none
+}
+
+.perforators-list {
+  list-style: none;
+}
+
+.perforators-list-item {
+  position: relative;
+}
+
+.perforators-list-item h3 {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.old-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: var(--basic-greymid);
+}
+
+.new-price {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+.popup-buttons {
+  width: 127px;
+  height: 112px;
+  position: absolute;
+  top: 0px;
+  background-color: var(--white);
+}
+
+.popup-button-buy {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: var(--basic-green);
+}
+
+.popup-button-bookmarks {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-bluedark);
+  background: var(--white);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden:hover {
+  opacity: 1;
+}
+
+/* Pagination */
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--white);
+}
+
+.pagination-item-current a {
+  color: var(--white);
+  background-color: var(--basic-red);
+}
