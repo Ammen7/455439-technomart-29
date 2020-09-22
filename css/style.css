@@ -10,6 +10,7 @@
   --basic-greylight: #C5C5C5;
   --basic-greylighten: #F3F7F9;
   --basic-background: #F1F5F7;
+  --basic-background-cart: #F1F1F1;
   --basic-backgroundlight: #F2F6F8;
   --basic-bluedarken: #293449;
   --basic-bluedark: #32425C;
@@ -27,6 +28,7 @@
   --special-blackblue: #161D29;
   --special-blackblueactive: #1D2739;
   --special-greylight: #F4F4F4;
+  --special-green-active: #518534;
   --special-red-hover: #CA2C37;
   --special-red-active: #BA2732;
   --special-white-cuarto: rgba(0, 0, 0, 0.25);
@@ -393,8 +395,7 @@ img {
 }*/
 
 .popular-manufacturers-item:active {
-  background-color: rgba(0, 0, 0, 0.0001);
-  color: rgba(0, 0, 0, 0.0001);
+  opacity: 0.5;
 }
 
 /* Services */
@@ -626,6 +627,11 @@ img {
   text-decoration: underline;
 }
 
+.footer-site-navigation a:active, .main-footer-menu-list a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
 /* Breadcrumbs */
 
 .heading {
@@ -680,9 +686,28 @@ img {
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
-  color: var(--basic-red);
-  border: none;
+  color: var(--basic-black);
+  opacity: 0.3;
   background-color: var(--basic-beige);
+}
+
+.sort-button:hover {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.sort-button:active {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-red);
 }
 
 .visually-hidden {
@@ -747,6 +772,14 @@ img {
   background: var(--basic-green);
 }
 
+.popup-button-buy:hover {
+  background-color: var(--success);
+}
+
+.popup-button-buy:active {
+  background-color: var(--special-green-active);
+}
+
 .popup-button-bookmarks {
   font-family: Cuprum;
   font-style: normal;
@@ -756,6 +789,12 @@ img {
   text-transform: uppercase;
   color: var(--basic-bluedark);
   background: var(--white);
+}
+
+.popup-button-bookmarks:hover {}
+
+.popup-button-bookmarks:active {
+  opacity: 0.5;
 }
 
 .hidden {
@@ -785,4 +824,66 @@ img {
 .pagination-item-current a {
   color: var(--white);
   background-color: var(--basic-red);
+}
+
+.about-perforators {
+  background-color: var(--basic-background);
+}
+
+.perforators-caption {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.perforators-text {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.cart-popup {
+  background-color: var(--white);
+}
+
+.cart-popup p {
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.cart-popup-buttons {
+  background-color: var(--basic-background-cart);
+}
+
+.cart-popup-order {
+  background-color: var(--basic-red);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.button-close-cart {
+  background-color: var(--white);
+  font-family: Cuprum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
