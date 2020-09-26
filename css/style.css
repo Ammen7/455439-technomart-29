@@ -62,8 +62,6 @@ img {
 /* Logo */
 
 .main-header-logo {
-  font-size: 16px;
-  color: var(--white);
   background-color: var(--basic-red);
 }
 
@@ -307,14 +305,6 @@ img {
   color: var(--basic-bluedark);
 }
 
-.popular-products-item {
-  background-color: var(--white);
-}
-
-/*.popular-products-item:hover {
-  TODO: Добавить тень и показать кнопки при наведении
-}*/
-
 .button {
   background-color: var(--basic-red);
   color: var(--white);
@@ -323,40 +313,6 @@ img {
 
 .button-all-goods {
   font-size: 14px;
-  line-height: 18px;
-}
-
-.popular-products-list {
-  list-style: none;
-}
-
-/* TODO: Разобраться, как сделать, чтобы появлялись кнопки при наведении*/
-
-.popular-products-item-caption {
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
-}
-
-.popular-products-item-old-price {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
-  text-decoration-line: line-through;
-  text-transform: uppercase;
-  color: var(--basic-greymid);
-}
-
-.button-price {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 17px;
   line-height: 18px;
 }
 
@@ -521,7 +477,6 @@ img {
 
 .main-footer-logo {
   background-color: var(--basic-red);
-  color: var(--white);
 }
 
 .footer-navigation a {
@@ -623,8 +578,17 @@ img {
   color: var(--basic-background);
 }
 
-.footer-site-navigation a:hover, .main-footer-menu-list a:hover {
+.footer-site-navigation a:hover,
+.main-footer-menu-list a:hover,
+.main-footer-bottom-developed a:hover,
+.main-footer-bottom-feedback a:hover {
   text-decoration: underline;
+}
+
+.main-footer-bottom-developed a:active,
+.main-footer-bottom-feedback a:active {
+  text-decoration: none;
+  color: var(--basic-red);
 }
 
 .footer-site-navigation a:active, .main-footer-menu-list a:active {
@@ -692,33 +656,26 @@ img {
 }
 
 .sort-button:hover {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
-  color: var(--basic-black);
   opacity: 1;
 }
 
 .sort-button:active {
-  font-family: PT Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 18px;
   color: var(--basic-red);
 }
 
 .visually-hidden {
-  display: none
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .perforators-list {
   list-style: none;
 }
 
-.perforators-list-item {
+.perforators-list-item, .popular-products-item {
   position: relative;
 }
 
@@ -791,7 +748,9 @@ img {
   background: var(--white);
 }
 
+/*
 .popup-button-bookmarks:hover {}
+*/
 
 .popup-button-bookmarks:active {
   opacity: 0.5;
