@@ -73,6 +73,7 @@ img {
   align-content: start;
 }
 
+
 /* Logo */
 
 .main-header-logo {
@@ -926,26 +927,31 @@ img {
 
 .filter {
   grid-column: 1 / 2;
-  grid-row: 2 / -2;
+  grid-row: 2 / -3;
+  background-color: var(--basic-beige);
 }
 
 .filter h2 {
+  margin: 0;
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-black);
-  background-color: var(--basic-beige);
+
 }
 
 .sort {
   grid-column: 2 / -1;
   grid-row: 2 / 3;
   background-color: var(--basic-beige);
+  display: block;
 }
 
 .sort h2 {
+  display: inline-block;
+  margin: 0;
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
@@ -955,6 +961,10 @@ img {
 }
 
 .sort-button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
@@ -1152,7 +1162,16 @@ img {
   background-color: var(--basic-background);
 }
 
+.about-perforators-wrapper {
+  box-sizing: border-box;
+  width: 940px;
+  height: 261px;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+
 .perforators-caption {
+  margin: 0 0 25px 0;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
