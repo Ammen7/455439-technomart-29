@@ -561,19 +561,30 @@ img {
 }
 
 .button-all-manufacturers {
+  width: 192px;
+  height: 38px;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
+  text-align: center;
+  margin-right: 19px;
 }
 
 .popular-manufacturers-list {
   padding-left: 0;
-  display: grid;
+  height: 310px;
+  /* display: grid;
   gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
   list-style: none;
+  margin: 0;
 }
 
 /* TODO: Разобраться, что за фильтр применяется при нажатии (прозрачность?)*/
@@ -704,21 +715,39 @@ img {
   color: var(--basic-black);
 }
 
+.service-item-credit .button {
+  display: inline-block;
+  width: 195px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+}
+
 /* Contacts */
 
 /* .contacts {
 } */
 
 .contacts-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 301px;
+  /* display: grid;
+  grid-template-columns: 1fr 301px; */
   /* gap: 161px; */
+  height: 356px;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto 70px;
   width: 940px;
   height: 356px;
 }
 
+.contacts-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contacts-about h3 {
+  margin: 0;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
@@ -746,7 +775,21 @@ img {
   color: var(--basic-black);
 }
 
+.contacts-about a {
+  width: 220px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+}
+
+.contacts-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contacts-map h3 {
+  margin: 0;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
@@ -763,6 +806,12 @@ img {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+}
+
+.contacts-map .button {
+height: 38px;
+text-align: center;
+line-height: 38px;
 }
 
 /* Footer */
@@ -820,9 +869,11 @@ img {
 }
 
 .main-footer-menu-list {
-  display: grid;
   width: 525px;
-  grid-template-columns: 1fr 1fr 1fr auto;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto; */
+display: flex;
+justify-content: space-between;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -849,8 +900,10 @@ img {
   left: 130px;
   top: 35px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 388px 252px 186px 111px;
+  /* display: grid;
+  grid-template-columns: 388px 252px 186px 111px; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-footer-bottom-copyright {
@@ -861,6 +914,11 @@ img {
   line-height: 18px;
   color: var(--white);
   margin: 0;
+}
+
+.main-footer-bottom-socials {
+  margin-left: 161px;
+  margin-right: auto;
 }
 
 .main-footer-bottom-socials a {
@@ -891,11 +949,22 @@ img {
   color: var(--white);
 }
 
+.main-footer-bottom-developed {
+margin-left: 51px;
+}
+
 .main-footer-bottom-feedback a, .main-footer-bottom-developed a {
   color: var(--special-yellowlight);
 }
 
-/*.feedback-form {}*/
+.feedback-form {
+  width: 640px;
+  height: 430px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15)); */
+}
 
 .feedback-form label {
   font-family: Cuprum;
@@ -923,8 +992,11 @@ img {
   top: 37px;
   left: 393px;
   width: 549px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto; */
+
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   padding-left: 0;
   margin-top: 0;
