@@ -41,6 +41,7 @@
 /* Global */
 
 body {
+  position: relative;
   min-width: 940px;
   margin: 0 auto;
   padding: 0;
@@ -137,9 +138,38 @@ img {
   background-color: var(--special-blackblue);
 }
 
+.wrapper-input-search {
+  position: relative;
+}
+
+.wrapper-input-search::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.wrapper-input-search:hover::before {
+  opacity: 1;
+}
+
+/*TODO: Не видно псевдоэлемент при активном поле поиска */
+
+.wrapper-input-search:focus::before {
+  background-image: url("../img/icon-search-focus.svg");
+  z-index: 10;
+}
+
 .input-search {
+  height: 42px;
   box-sizing: border-box;
-  margin-left: 42px;
+  padding-left: 42px;
   margin-right: auto;
   font-family: Cuprum;
   font-style: normal;
@@ -151,7 +181,19 @@ img {
   border: none;
 }
 
-/* .input-search:hover {} */
+/* TODO: Псевдоэлементы для полей ввода не работают. Придумать что-нибудь другое. */
+
+/* .input-search::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+} */
 
 .input-search:focus {
   background-color: var(--white);
@@ -159,14 +201,60 @@ img {
 }
 
 .button-bookmarks {
-  width: 136px;
+  position: relative;
+  padding-left: 43px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.button-bookmarks::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.button-bookmarks:hover::before {
+  opacity: 1;
+}
+
+.button-bookmarks:active::before {
+  opacity: 0.3;
+}
+
 .button-cart {
-  width: 136px;
+  position: relative;
+  padding-left: 49px;
+  padding-right: 26px;
   margin-right: 0;
+}
+
+.button-cart::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 26px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.button-cart:hover::before {
+  opacity: 1;
+}
+
+.button-cart:active::before {
+  opacity: 0.3;
 }
 
 .button-cart-full {
@@ -215,16 +303,31 @@ img {
 }
 
 .main-header-contacts-phone {
+  position: relative;
   display: inline-block;
   box-sizing: border-box;
-  width: 270px;
-  height: 45px;
+  padding-left: 71px;
+  padding-right: 42px;
+  padding-top: 4px;
+  padding-bottom: 5px;
   font-weight: bold;
   font-size: 21px;
   text-align: center;
-  line-height: 45px;
+  line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--white);
+}
+
+.main-header-contacts-phone::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 39px;
+  width: 19px;
+  height: 20px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .main-header-contacts p {
@@ -263,8 +366,32 @@ img {
 }
 
 .login-link {
-  width: 121px;
+  position: relative;
   height: 45px;
+  padding-left: 45px;
+  padding-right: 27px;
+}
+
+.login-link::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* TODO: Это декоративное изображение, не контентное. Значит, задаем в CSS. Но как отсюда менять цвет без изменения самой иконки? */
+
+.login-link:hover::before {
+  background-image: url("../img/icon-login-hover.svg");
+}
+
+.login-link:active::before {
+  background-image: url("../img/icon-login.svg");
 }
 
 .registration-link {
@@ -476,29 +603,106 @@ img {
 
 .materials {
   /* grid-area: materials; */
+  position: relative;
   background-color: var(--special-yellow);
+}
+
+.materials::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 213px;
+  width: 44px;
+  height: 65px;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.materials::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/new.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .tool {
   /* grid-area: tool; */
+  position: relative;
   background-color: var(--special-blue);
+}
+
+.tool::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 194px;
+  width: 75px;
+  height: 61px;
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .technics {
   /* grid-area: technics; */
+  position: relative;
   background-color: var(--special-lilac);
+}
+
+.technics::before {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 191px;
+  width: 78px;
+  height: 62px;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .sale {
   /* grid-area: sale; */
   /* margin-left: 640px; */
+  position: relative;
   background-color: var(--special-greenlight);
+}
+
+.sale::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 196px;
+  width: 59px;
+  height: 72px;
+  background-image: url("../img/icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .delivery {
   /* grid-area: delivery; */
   /* margin-left: 640px; */
+  position: relative;
   background-color: var(--special-yellowed);
+}
+
+.delivery::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 191px;
+  width: 78px;
+  height: 63px;
+  background-image: url("../img/icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* TODO: Разобраться, как сделать текст внутри ссылки непрозрачным, не используя rgba */
@@ -506,13 +710,40 @@ img {
 /* Slider */
 
 .slider {
-  /* position: absolute; */
+  position: relative;
   /* top: 143px; */
   display: grid;
   grid-area: sld;
   /* display: grid; */
   width: 620px;
   height: 266px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 122px;
+  left: 24px;
+  width: 22px;
+  height: 40px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 2;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 122px;
+  right: 20px;
+  width: 22px;
+  height: 40px;
+  background-image: url("../img/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  rotate: 180deg;
+  z-index: 2;
 }
 
 .slider-item {
@@ -597,6 +828,18 @@ img {
 }
 
 /* Popular products */
+
+.new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/new.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 .wrapper-cream-background {
   display: flex;
@@ -729,8 +972,8 @@ img {
 }
 
 .services h2 {
-  position: absolute;
-  top: 64px;
+  margin: 0;
+  padding-top: 64px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -738,8 +981,7 @@ img {
 }
 
 .services-text {
-  position: absolute;
-  top: 119px;
+  margin-top: 25px;
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
@@ -749,11 +991,25 @@ img {
 }
 
 .services-list-links {
-  position: absolute;
-  top: 238px;
+  position: relative;
+  width: 240px;
+  height: 185px;
+  top: 60px;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.services-list-links::before {
+  content: "";
+  position: absolute;
+  top: -47px;
+  right: 0px;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/service-shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .services-list-item {
@@ -812,12 +1068,48 @@ img {
   color: var(--basic-black);
 }
 
+.service-item-delivery::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/delivery.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.service-item-guarantee::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/guarantee.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .service-item-credit .button {
   display: inline-block;
   width: 195px;
   height: 38px;
   text-align: center;
   line-height: 38px;
+}
+
+.service-item-credit::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 465px;
+  height: 285px;
+  background-image: url("../img/credit.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* Contacts */
@@ -829,7 +1121,6 @@ img {
   /* display: grid;
   grid-template-columns: 1fr 301px; */
   /* gap: 161px; */
-  height: 356px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto 70px;
@@ -845,6 +1136,7 @@ img {
 
 .contacts-about h3 {
   margin: 0;
+  margin-bottom: 20px;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
@@ -861,15 +1153,37 @@ img {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+  padding: 0;
+  margin: 0;
+}
+
+.transport-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .transport-item {
+  position: relative;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
+  padding-left: 37px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.transport-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
 }
 
 .contacts-about a {
@@ -1057,22 +1371,83 @@ img {
   color: var(--special-yellowlight);
 }
 
+/* Write us form */
+
 .feedback-form {
-  width: 640px;
+  /* position: absolute; */
+  left: 282px;
+  top: 2369px;
+  width: 620px;
   height: 430px;
+  background: linear-gradient(180deg, var(--basic-red) 0%, var(--basic-red) 7px, var(--white) 7px, var(--white) 318px, var(--special-greylight) 318px, var(--special-greylight) 100%);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   /* display: flex;
   flex-direction: column;
+  justify-content: space-between; */
+}
+
+.wrapper-feedback-form {
+  position: relative;
+  box-sizing: border-box;
+  padding: 46px 80px 37px;
+}
+
+.wrapper-feedback-form::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: 11px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.feedback-form form {
+  height: 347px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15)); */
+  align-content: space-between;
 }
 
 .feedback-form label {
+  display: block;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
+}
+
+.feedback-form input {
+  display: block;
+  box-sizing: border-box;
+  margin-top: 11px;
+}
+
+.feedback-form textarea {
+  display: block;
+  box-sizing: border-box;
+  margin-top: 13px;
+}
+
+.label-name input {
+  width: 220px;
+}
+
+.label-email input {
+  width: 220px;
+}
+
+.label-message-text {
+  margin-top: 13px;
+}
+
+.label-message-text textarea {
+  width: 460px;
 }
 
 .feedback-form-field {
@@ -1083,6 +1458,49 @@ img {
   line-height: 24px;
   color: var(--basic-greymid);
   resize: none;
+  padding-left: 12px;
+}
+
+.feedback-submit {
+  width: 460px;
+  height: 38px;
+}
+
+/* Map popup */
+
+.map-popup {
+  width: 943px;
+  height: 449px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.wrapper-map-popup {
+  position: relative;
+  width: 943px;
+  height: 449px;
+}
+
+.wrapper-map-popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 943px;
+  height: 7px;
+  background-image: url("../img/Object.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.wrapper-map-popup::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .main-footer-navigation {
@@ -1339,6 +1757,8 @@ img {
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--basic-red);
+  border-radius: 3px 0 0 3px;
+  clip-path: polygon(121px 0%, 100% 50%, 121px 100%, 0% 100%, 0% 0%);
 }
 
 .popup-buttons-wrapper {
@@ -1462,7 +1882,6 @@ img {
 
 .pagination-item:active {
   border: 1px solid var(--basic-red);
-
 }
 
 .pagination-item a {
