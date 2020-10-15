@@ -89,7 +89,7 @@
       </ul>
 
       <div class="slider">
-        <div class="slider-item slider-item-perforators">
+        <div class="slider-item slider-item-perforators ">
           <!-- <div class="slider-item-wrapper"> -->
           <!-- <img class="slider-item-image" src="img/Slider-perforators.jpg" width="620" height="266" alt="Перфораторы"> -->
           <p class="slider-caption"> Перфораторы </p>
@@ -97,7 +97,7 @@
           <a class="button button-open-catalog" href="catalog.html">Открыть каталог</a>
           <!-- </div> -->
         </div>
-        <div class="slider-item slider-item-drills">
+        <div class="slider-item slider-item-drills active">
           <!-- <div class="slider-item-wrapper"> -->
           <!-- <img src="img/Slider-drills.jpg" width="620" height="266" alt="Дрели"> -->
           <p class="slider-caption"> Дрели </p>
@@ -126,15 +126,15 @@
             </div>
           </div>
 
-          <!-- <a href="#"> -->
           <h3>Перфоратор BOSCH <br>
             BFG 9000
           </h3>
           <p class="old-price">
             32500 Р.
           </p>
-          <p class="new-price">25500 Р.</p>
-          <!-- </a> -->
+          <a href="#">
+            <p class="new-price">25500 Р.</p>
+          </a>
         </li>
         <li class="perforators-list-item new">
           <img src="img/Bosch-BFG3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -144,15 +144,15 @@
               <a href="#" class="popup-button-bookmarks">В закладки</a>
             </div>
           </div>
-          <!-- <a href="#"> -->
           <h3>Перфоратор BOSCH <br>
             BFG 3000
           </h3>
           <p class="old-price">
             22500 Р.
           </p>
-          <p class="new-price">15500 Р.</p>
-          <!-- </a> -->
+          <a href="#">
+            <p class="new-price">15500 Р.</p>
+          </a>
         </li>
         <li class="perforators-list-item">
           <img src="img/Bosch-BFG6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -162,15 +162,15 @@
               <a href="#" class="popup-button-bookmarks">В закладки</a>
             </div>
           </div>
-          <!-- <a href="#"> -->
           <h3>Перфоратор BOSCH <br>
             BFG 6000
           </h3>
           <p class="old-price">
             30500 Р.
           </p>
-          <p class="new-price">25500 Р.</p>
-          <!-- </a> -->
+          <a href="#">
+            <p class="new-price">25500 Р.</p>
+          </a>
         </li>
         <li class="perforators-list-item new">
           <img src="img/Bosch-BFG2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -180,13 +180,14 @@
               <a href="#" class="popup-button-bookmarks">В закладки</a>
             </div>
           </div>
-          <!-- <a href="#"> -->
           <h3>Перфоратор BOSCH <br>
             BFG 2000
           </h3>
           <p class="old-price"></p>
-          <p class="new-price">25500 Р.</p>
-          <!-- </a> -->
+          <a href="#">
+            <p class="new-price">25500 Р.</p>
+          </a>
+
         </li>
 
       </ul>
@@ -223,14 +224,15 @@
           Хороший интернет-магазин отличается от плохого не только ценами! <br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
+        <div class="service-items" >
         <ul class="services-list-links">
           <!-- TODO: Разобраться, как открывать и скрывать эти окна -->
-          <li class="services-list-item"><a href="#">Доставка</a></li>
+          <li class="services-list-item active"><a href="#">Доставка</a></li>
           <li class="services-list-item"><a href="#">Гарантия</a></li>
           <li class="services-list-item"><a href="#">Кредит</a></li>
         </ul>
-        <div>
-          <div class="service-item service-item-delivery">
+
+          <div class="service-item service-item-delivery active">
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо <br>
@@ -238,8 +240,8 @@
               Ведь мы неплохо заработаем, <br>
               поднимая его на ваш этаж! <br>
             </p>
-          </div>
-          <div class="service-item service-item-guarantee">
+          </div  >
+          <div class="service-item service-item-guarantee ">
             <h3>Гарантия</h3>
             <p>
               Если купленный у нас товар поломается или заискрит, <br>
@@ -249,7 +251,7 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </div>
-          <div class="service-item service-item-credit">
+          <div class="service-item service-item-credit ">
             <h3>Кредит</h3>
             <p>
               Залезть в долговую яму стало проще! <br>
@@ -268,8 +270,8 @@
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br> ремонта и строительства не
             оставит
             равнодушными любителей сэкономить на <br> гастарбайтерах.
-            <br>
-            <br>
+          </p>
+          <p>
             Мы можем доставить ваш товар в самые отдаленные точки России! <br>
             Техномарт работает со многими транспортными компаниями:
           </p>
@@ -372,9 +374,9 @@
 
 
   </footer>
-  <section class="modal feedback-form">
+  <section class="modal feedback-form show">
     <!--TODO: Разобраться, как открыть окно-->
-    <div class="wrapper-feedback-form">
+    <div class="wrapper-feedback-form ">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru/courses" method="GET">
         <label class="label-name">Ваше имя: <input class="feedback-form-field" type="text" name="name" id="name-field"
@@ -389,16 +391,16 @@
         <input class="button feedback-submit" type="submit" value="Отправить">
       </form>
       <!-- TODO: Сделать рабочей кнопку Закрыть -->
-      <button class="feedback-form-button-close visually-hidden">Закрыть</button>
+      <button class="feedback-form-button-close" aria-label="Закрыть"></button>
     </div>
   </section>
 
-  <section class="modal map-popup">
+  <section class="modal map-popup ">
     <div class="wrapper-map-popup">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/map.png" width="943" height="449" alt="Карта">
       <!-- TODO: Сделать рабочей кнопку Закрыть -->
-      <button class="map-popup-button-close visually-hidden">Закрыть</button>
+      <button class="map-popup-button-close " aria-label="Закрыть"></button>
     </div>
 
 
