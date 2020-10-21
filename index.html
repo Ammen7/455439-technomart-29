@@ -14,18 +14,15 @@
 <body class="page-body">
 
   <header class="main-header">
+
     <div class="top-menu-wrapper">
       <div class="top-menu">
         <a class="main-header-logo" href="#">
           <img src="img/logo-technomart.svg" alt="Техномарт">
         </a>
-        <!-- <a class="top-menu-link button-search" href="#">Поиск:</a> -->
         <div class="top-menu-link wrapper-input-search">
-
           <input class=" input-search" type="text" name="name" id="name-field" placeholder="Поиск:">
-
         </div>
-
         <a class="top-menu-link button-bookmarks" href="#">Закладки: 0</a>
         <a class="top-menu-link button-cart" href="#">Корзина: 0</a>
         <a class="top-menu-link button-order" href="#">Оформить заказ</a>
@@ -34,12 +31,10 @@
 
     <div class="main-header-info-wrapper">
       <p class="company-description">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
-
       <address class="main-header-contacts">
         <a class="main-header-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </address>
-
       <div class="login">
         <a class="login-link" href="#">Войти</a>
         <a class="registration-link" href="#">Регистрация</a>
@@ -90,21 +85,20 @@
 
       <div class="slider">
         <div class="slider-item slider-item-perforators ">
-          <!-- <div class="slider-item-wrapper"> -->
-          <!-- <img class="slider-item-image" src="img/Slider-perforators.jpg" width="620" height="266" alt="Перфораторы"> -->
           <p class="slider-caption"> Перфораторы </p>
           <p class="slider-tagline"> Настоящие мужские игрушки </p>
           <a class="button button-open-catalog" href="catalog.html">Открыть каталог</a>
-          <!-- </div> -->
+
         </div>
         <div class="slider-item slider-item-drills active">
-          <!-- <div class="slider-item-wrapper"> -->
-          <!-- <img src="img/Slider-drills.jpg" width="620" height="266" alt="Дрели"> -->
           <p class="slider-caption"> Дрели </p>
           <p class="slider-tagline"> Соседям на радость! </p>
           <a class="button button-open-catalog" href="catalog.html">Открыть каталог</a>
-          <!-- </div> -->
         </div>
+
+        <button class="slider-button-left " aria-label="Предыдущий слайд"></button>
+        <button class="slider-button-right " aria-label="Следующий слайд"></button>
+
       </div>
 
     </section>
@@ -113,19 +107,17 @@
         <h2>Популярные товары:</h2>
         <a class="button button-all-goods" href="#">Все популярные товары</a>
       </div>
-
       <ul class="perforators-list">
-
         <li class="perforators-list-item">
-          <img src="img/Bosch-BFG9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-
+          <div class="perforators-list-item-image-wrapper">
+            <img src="img/Bosch-BFG9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+          </div>
           <div class="popup-buttons-wrapper hidden">
             <div class="popup-buttons ">
               <a href="#" class="popup-button-buy">Купить</a>
               <a href="#" class="popup-button-bookmarks">В закладки</a>
             </div>
           </div>
-
           <h3>Перфоратор BOSCH <br>
             BFG 9000
           </h3>
@@ -137,7 +129,9 @@
           </a>
         </li>
         <li class="perforators-list-item new">
-          <img src="img/Bosch-BFG3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          <div class="perforators-list-item-image-wrapper">
+            <img src="img/Bosch-BFG3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+          </div>
           <div class="popup-buttons-wrapper hidden">
             <div class="popup-buttons ">
               <a href="#" class="popup-button-buy">Купить</a>
@@ -155,7 +149,9 @@
           </a>
         </li>
         <li class="perforators-list-item">
-          <img src="img/Bosch-BFG6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+          <div class="perforators-list-item-image-wrapper">
+            <img src="img/Bosch-BFG6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+          </div>
           <div class="popup-buttons-wrapper hidden">
             <div class="popup-buttons ">
               <a href="#" class="popup-button-buy">Купить</a>
@@ -173,7 +169,9 @@
           </a>
         </li>
         <li class="perforators-list-item new">
-          <img src="img/Bosch-BFG2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+          <div class="perforators-list-item-image-wrapper">
+            <img src="img/Bosch-BFG2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+          </div>
           <div class="popup-buttons-wrapper hidden">
             <div class="popup-buttons ">
               <a href="#" class="popup-button-buy">Купить</a>
@@ -187,9 +185,7 @@
           <a href="#">
             <p class="new-price">25500 Р.</p>
           </a>
-
         </li>
-
       </ul>
     </section>
     <section class="popular-manufacturers">
@@ -217,6 +213,7 @@
               alt="Metabo"></a></li>
       </ul>
     </section>
+
     <section class="services">
       <div class="services-wrapper">
         <h2>Сервисы</h2>
@@ -224,14 +221,13 @@
           Хороший интернет-магазин отличается от плохого не только ценами! <br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <div class="service-items" >
-        <ul class="services-list-links">
-          <!-- TODO: Разобраться, как открывать и скрывать эти окна -->
-          <li class="services-list-item active"><a href="#">Доставка</a></li>
-          <li class="services-list-item"><a href="#">Гарантия</a></li>
-          <li class="services-list-item"><a href="#">Кредит</a></li>
-        </ul>
-
+        <div class="service-items">
+          <ul class="services-list-links">
+            <!-- TODO: Разобраться, как открывать и скрывать эти окна -->
+            <li class="services-list-item active"><a href="#">Доставка</a></li>
+            <li class="services-list-item"><a href="#">Гарантия</a></li>
+            <li class="services-list-item"><a href="#">Кредит</a></li>
+          </ul>
           <div class="service-item service-item-delivery active">
             <h3>Доставка</h3>
             <p>
@@ -240,7 +236,7 @@
               Ведь мы неплохо заработаем, <br>
               поднимая его на ваш этаж! <br>
             </p>
-          </div  >
+          </div>
           <div class="service-item service-item-guarantee ">
             <h3>Гарантия</h3>
             <p>
@@ -261,11 +257,12 @@
           </div>
         </div>
     </section>
+
     <section class="contacts">
       <h2 class="visually-hidden">О компании</h2>
       <div class="contacts-wrapper">
         <div class="contacts-about">
-          <h3>Компания "ТЕХНОМАРТ"</h3>
+          <h3>Компания «ТЕХНОМАРТ» </h3>
           <p>
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br> ремонта и строительства не
             оставит
@@ -314,7 +311,6 @@
         </nav>
         <address class="main-footer-contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-
           <a class="main-footer-contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </address>
         <div class="main-footer-menu">
@@ -327,8 +323,6 @@
         </div>
       </div>
     </div>
-
-
 
     <div class="main-footer-bottom">
       <div class="main-footer-bottom-wrapper">
@@ -356,10 +350,6 @@
             </svg>
             <span class="visually-hidden">Инстаграм</span>
           </a>
-
-          <!-- <a href="#"><img src="img/icon-vk.svg" width="26" height="15" alt="ВКонтакте"></a>
-          <a href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="Фэйсбук"></a>
-          <a href="#"><img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм"></a> -->
         </div>
         <p class="main-footer-bottom-feedback">
           Обратная связь: <br>
@@ -371,10 +361,9 @@
         </p>
       </div>
     </div>
-
-
   </footer>
-  <section class="modal feedback-form show">
+
+  <section class="modal feedback-form">
     <!--TODO: Разобраться, как открыть окно-->
     <div class="wrapper-feedback-form ">
       <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -387,7 +376,6 @@
         </label>
         <label class="label-message-text">Текст письма: <textarea class="feedback-form-field" name="message"
             id="message-field" placeholder="В свободной форме"></textarea></label>
-
         <input class="button feedback-submit" type="submit" value="Отправить">
       </form>
       <!-- TODO: Сделать рабочей кнопку Закрыть -->
@@ -402,7 +390,6 @@
       <!-- TODO: Сделать рабочей кнопку Закрыть -->
       <button class="map-popup-button-close " aria-label="Закрыть"></button>
     </div>
-
 
   </section>
 </body>
