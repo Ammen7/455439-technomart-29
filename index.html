@@ -21,7 +21,7 @@
           <img src="img/logo-technomart.svg" alt="Техномарт">
         </a>
         <div class="top-menu-link wrapper-input-search">
-          <input class=" input-search" type="text" name="name" id="name-field" placeholder="Поиск:">
+          <input class="input-search" type="text" name="name" placeholder="Поиск:">
         </div>
         <a class="top-menu-link button-bookmarks" href="#">Закладки: 0</a>
         <a class="top-menu-link button-cart" href="#">Корзина: 0</a>
@@ -50,6 +50,7 @@
         <li><a href="#">Спецпредложения</a></li>
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Контакты</a></li>
+
       </ul>
     </nav>
   </header>
@@ -183,9 +184,10 @@
           </h3>
           <p class="old-price"></p>
           <a href="#">
-            <p class="new-price">25500 Р.</p>
+            <p class="new-price">12500 Р.</p>
           </a>
         </li>
+
       </ul>
     </section>
     <section class="popular-manufacturers">
@@ -211,6 +213,7 @@
         </li>
         <li class="popular-manufacturers-item"><a href="#"><img src="img/Metabo.png" width="204" height="69"
               alt="Metabo"></a></li>
+
       </ul>
     </section>
 
@@ -256,6 +259,7 @@
             <a class="button" href="#">Отправить заявку</a>
           </div>
         </div>
+      </div>
     </section>
 
     <section class="contacts">
@@ -307,6 +311,7 @@
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
+
           </ul>
         </nav>
         <address class="main-footer-contacts">
@@ -319,6 +324,8 @@
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
             <li><a href="#">Спецпредложения</a></li>
+
+
           </ul>
         </div>
       </div>
@@ -363,7 +370,7 @@
     </div>
   </footer>
 
-  <section class="modal feedback-form">
+  <section class="modal feedback-form show">
     <!--TODO: Разобраться, как открыть окно-->
     <div class="wrapper-feedback-form ">
       <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -383,10 +390,18 @@
     </div>
   </section>
 
-  <section class="modal map-popup ">
+  <section class="modal map-popup">
     <div class="wrapper-map-popup">
       <h2 class="visually-hidden">Карта</h2>
-      <img src="img/map.png" width="943" height="449" alt="Карта">
+      <!-- <div style="position:relative;overflow:hidden;"><a
+          href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
+          href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&utm_medium=mapframe&utm_source=maps&z=16.67"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 —
+          Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~BGAWtB" width="943" height="449"
+          frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div> -->
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586849!2d30.32085335195471!3d59.93871648178725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603357780396!5m2!1sru!2sru" width="943" height="449" frameborder="0" style="border:0;" allowfullscreen title="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" aria-hidden="false" tabindex="0"></iframe> -->
+      <img src="img/map.png" width="943" height="449" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
       <!-- TODO: Сделать рабочей кнопку Закрыть -->
       <button class="map-popup-button-close " aria-label="Закрыть"></button>
     </div>
