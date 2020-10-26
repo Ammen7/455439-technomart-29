@@ -74,7 +74,7 @@ img {
 }
 
 .page-body {
-  width: 1200px;
+  width: 100%;
   min-height: 100%;
   display: grid;
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
@@ -146,11 +146,11 @@ img {
   background-color: var(--special-blackblue);
 }
 
-.wrapper-input-search {
+.form-input-search {
   position: relative;
 }
 
-.wrapper-input-search::before {
+.form-input-search::before {
   content: "";
   position: absolute;
   top: 11px;
@@ -159,24 +159,25 @@ img {
   height: 17px;
   background-image: url("../img/icon-search-focus.svg");
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
 }
 
-.wrapper-input-search:hover::before {
+.form-input-search:hover::before {
   opacity: 1;
 }
 
-.wrapper-input-search:focus-within::before {
+.form-input-search:focus-within::before {
   background-image: url("../img/icon-search-focus.svg");
   -webkit-filter: none;
-          filter: none;
+  filter: none;
   opacity: 1;
 }
 
 .input-search {
+  width: 271px;
   height: 42px;
   box-sizing: border-box;
   padding-left: 42px;
@@ -386,6 +387,7 @@ img {
 }
 
 .logined {
+  position: relative;
   width: 299px;
   height: 70px;
   flex-direction: column;
@@ -420,21 +422,19 @@ img {
   height: 18px;
   background-image: url("../img/icon-login.svg");
   -webkit-filter: grayscale(100%) brightness(2.45);
-          filter: grayscale(100%) brightness(2.45);
+  filter: grayscale(100%) brightness(2.45);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-/* TODO: Это декоративное изображение, не контентное. Значит, задаем в CSS. Но как отсюда менять цвет без изменения самой иконки? */
-
 .login-link:hover::before {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .login-link:active::before {
   -webkit-filter: grayscale(100%) brightness(2.45);
-          filter: grayscale(100%) brightness(2.45);
+  filter: grayscale(100%) brightness(2.45);
 }
 
 .registration-link {
@@ -464,6 +464,22 @@ img {
   background-color: var(--white);
 }
 
+.button-logout {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  top: 14px;
+  right: 17px;
+  width: 20px;
+  height: 17px;
+  background-image: url("../img/icon-logout.svg");
+  -webkit-filter: grayscale(100%) brightness(2.45);
+  filter: grayscale(100%) brightness(2.45);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
 .login-user:hover {
   color: var(--basic-black);
 }
@@ -481,22 +497,22 @@ img {
   height: 18px;
   background-image: url("../img/icon-user.svg");
   -webkit-filter: grayscale(100%) brightness(2.45);
-          filter: grayscale(100%) brightness(2.45);
+  filter: grayscale(100%) brightness(2.45);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-.login-user:hover::before, .login-user:hover::after {
+.login-user:hover::before, .button-logout:hover {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
-.login-user:active::before, .login-user:active::after {
+.login-user:active::before, .button-logout:active {
   -webkit-filter: grayscale(100%) brightness(2.45);
-          filter: grayscale(100%) brightness(2.45);
+  filter: grayscale(100%) brightness(2.45);
 }
 
-.login-user::after {
+/* .login-user::after {
   content: "";
   position: absolute;
   top: 14px;
@@ -508,7 +524,7 @@ img {
           filter: grayscale(100%) brightness(2.45);
   background-repeat: no-repeat;
   background-position: 0 0;
-}
+} */
 
 .login-user-menu-item:first-child {
   list-style: none;
@@ -861,6 +877,8 @@ img {
   width: 620px;
   height: 266px;
   /* display: grid; */
+  background-color: rgb(107, 90, 83);
+  /* TODO: Создать для всех цветов переменные (Д30) */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -928,11 +946,19 @@ img {
   text-align: center;
 }
 
-.button-open-catalog:hover {
+/* .button-open-catalog:hover {
   background-color: var(--special-red-hover);
 }
 
 .button-open-catalog:active {
+  background-color: var(--special-red-active);
+} */
+
+.button:hover {
+  background-color: var(--special-red-hover);
+}
+
+.button:active {
   background-color: var(--special-red-active);
 }
 
@@ -1060,9 +1086,8 @@ img {
 }
 
 .popular-manufacturers-item:hover {
-  /* TODO: Добавить тень при наведении */
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
 .popular-manufacturers-item:active {
@@ -1072,7 +1097,6 @@ img {
 /* Services */
 
 .services {
-  width: 1200px;
   background-color: var(--basic-background);
 }
 
@@ -1543,14 +1567,17 @@ img {
 /* Write us form */
 
 .feedback-form {
-  position: absolute;
-  left: 282px;
-  top: 2369px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 35%;
+  bottom: auto;
   width: 620px;
   height: 430px;
-  background: linear-gradient(180deg, var(--basic-red) 0%, var(--basic-red) 7px, var(--white) 7px, var(--white) 163px, var(--special-greylight) 163px, var(--special-greylight) 100%);
+  background: linear-gradient(180deg, var(--basic-red) 0%, var(--basic-red) 7px, var(--white) 7px, var(--white) 318px, var(--special-greylight) 318px, var(--special-greylight) 100%);
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
@@ -1643,13 +1670,16 @@ img {
 /* Map popup */
 
 .map-popup {
-  position: absolute;
-  top: 2369px;
-  left: 120px;
+  position: fixed;
+  top: 35%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 943px;
   height: 449px;
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
 .wrapper-map-popup {
@@ -1754,7 +1784,7 @@ img {
   grid-template-columns: repeat(4, 220px);
   row-gap: 20px;
   -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 
 /* Breadcrumbs */
@@ -1778,7 +1808,7 @@ img {
 }
 
 .breadcrumbs {
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   grid-row: 1 / 2;
   margin: 0;
   padding: 0;
@@ -1943,19 +1973,19 @@ img {
   height: 10px;
   background-image: url(../img/icon-down-dir.svg);
   -webkit-filter: grayscale(1) opacity(0.3);
-          filter: grayscale(1) opacity(0.3);
+  filter: grayscale(1) opacity(0.3);
   background-repeat: no-repeat;
 }
 
 .sort-button-increase:hover::before {
   -webkit-filter: brightness(0) grayscale(1) opacity(1);
-          filter: brightness(0) grayscale(1) opacity(1);
+  filter: brightness(0) grayscale(1) opacity(1);
   border: none;
 }
 
 .sort-button-increase:active::before, .sort-button-increase:focus::before {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .sort-button-decrease {
@@ -1975,19 +2005,19 @@ img {
   background-image: url(../img/icon-down-dir.svg);
   transform: rotate(180deg);
   -webkit-filter: grayscale(1) opacity(0.3);
-          filter: grayscale(1) opacity(0.3);
+  filter: grayscale(1) opacity(0.3);
   background-repeat: no-repeat;
 }
 
 .sort-button-decrease:hover::before {
   -webkit-filter: brightness(0) grayscale(1) opacity(1);
-          filter: brightness(0) grayscale(1) opacity(1);
+  filter: brightness(0) grayscale(1) opacity(1);
   border: none;
 }
 
 .sort-button-decrease:active::before, .sort-button-decrease:focus::before {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .sort-button-increase:hover, .sort-button-decrease:hover {
@@ -2049,7 +2079,7 @@ img {
 
 .perforators-list-item:hover {
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
 .perforators-list-item-image-wrapper {
@@ -2086,7 +2116,7 @@ img {
   font-size: 17px;
   line-height: 18px;
   -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   text-transform: uppercase;
   color: var(--basic-greymid);
 }
@@ -2110,7 +2140,7 @@ img {
   background-color: var(--basic-red);
   border-radius: 3px 0 0 3px;
   -webkit-clip-path: polygon(121px 0%, 100% 50%, 121px 100%, 0% 100%, 0% 0%);
-          clip-path: polygon(121px 0%, 100% 50%, 121px 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(121px 0%, 100% 50%, 121px 100%, 0% 100%, 0% 0%);
 }
 
 .popup-buttons-wrapper {
@@ -2501,8 +2531,8 @@ legend.legend-manufacturers {
   display: block;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   margin-left: 35px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2526,6 +2556,8 @@ legend.legend-manufacturers {
   width: 24px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  opacity: 0.7;
 }
 
 .check-input:checked+.check-box::before {
@@ -2538,6 +2570,10 @@ legend.legend-manufacturers {
   background-image: url("../img/checkbox-on.svg");
 }
 
+.check:hover .check-box::before {
+  opacity: 1;
+}
+
 legend.legend-power {
   margin-top: 2px;
 }
@@ -2547,8 +2583,8 @@ legend.legend-power {
   display: block;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   margin-left: 35px;
   padding-top: 12px;
   padding-bottom: 10px;
@@ -2573,6 +2609,7 @@ legend.legend-power {
   height: 26px;
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
+  opacity: 0.7;
 }
 
 .radio-input:checked+.radio-box::before {
@@ -2584,6 +2621,10 @@ legend.legend-power {
   height: 26px;
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
+}
+
+.radio:hover .radio-box::before {
+  opacity: 1;
 }
 
 .filter-button-show {
