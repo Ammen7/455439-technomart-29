@@ -25,6 +25,9 @@
   --basic-cream: #F9F5F0;
   --basic-beige: #F7F3EC;
   --white: #FFFFFF;
+  --special-feature:rgba(255, 255, 255, 0.3);
+  --special-feature-hover:rgba(197, 197, 197, 0.3);
+  --special-feature-active:rgba(169, 169, 169, 0.3);
   --special-yellow: #FFBF47;
   --special-yellowed: #FFC047;
   --special-blue: #3BBCE3;
@@ -39,6 +42,7 @@
   --special-red-hover: #CA2C37;
   --special-red-active: #BA2732;
   --special-white-cuarto: rgba(0, 0, 0, 0.25);
+  --special-active:  rgba(255, 255, 255, 0.5);
   --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
@@ -142,7 +146,7 @@ img {
 /* .top-menu-link:hover {} */
 
 .top-menu-link:active {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--special-active);
   background-color: var(--special-blackblue);
 }
 
@@ -244,7 +248,7 @@ img {
   opacity: 0.3;
 }
 
-.button-bookmarks:hover::before {
+.button-bookmarks:hover::before, .button-bookmarks:focus:before{
   opacity: 1;
 }
 
@@ -254,7 +258,7 @@ img {
 
 .button-cart {
   position: relative;
-  padding-left: 35px;
+  padding-left: 34px;
   padding-right: 27px;
   margin-right: 0;
 }
@@ -272,7 +276,7 @@ img {
   opacity: 0.3;
 }
 
-.button-cart:hover::before {
+.button-cart:hover::before, .button-cart:focus::before {
   opacity: 1;
 }
 
@@ -703,7 +707,7 @@ img {
   margin-left: 23px;
   margin-bottom: 21px;
   margin-top: auto;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--special-feature);
   font-weight: normal;
   font-size: 14px;
   line-height: 38px;
@@ -713,11 +717,11 @@ img {
 }
 
 .feature-item a:hover {
-  background-color: rgba(197, 197, 197, 0.3);
+  background-color: var(--special-feature-hover);
 }
 
 .feature-item a:active {
-  background-color: rgba(169, 169, 169, 0.3);
+  background-color: var(--special-feature-active);
 }
 
 .materials {
@@ -1830,6 +1834,11 @@ img {
   text-transform: uppercase;
   margin-right: 42px;
   box-sizing: border-box;
+  color: var(--basic-black);
+}
+
+.breadcrumbs a:visited {
+  color: var(--basic-black);
 }
 
 .breadcrumbs li:first-child {
@@ -2354,6 +2363,16 @@ img {
   padding-bottom: 67px;
   margin: 0;
   color: var(--basic-black);
+}
+
+.cart-popup p::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 81px;
+  width: 66px;
+  height: 66px;
+  background-image: url(../img/icon-mark.svg);
 }
 
 .cart-popup-buttons {
