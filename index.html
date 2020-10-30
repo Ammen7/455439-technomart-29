@@ -18,7 +18,7 @@
     <div class="top-menu-wrapper">
       <div class="top-menu">
         <a class="main-header-logo" href="#">
-          <img src="img/logo-technomart.svg" alt="Техномарт" width="108px" height="18px" >
+          <img src="img/logo-technomart.svg" alt="Техномарт" width="108px" height="18px">
         </a>
         <form class="top-menu-link form-input-search">
           <input class="input-search" type="text" name="name" placeholder="Поиск:">
@@ -62,7 +62,6 @@
         <li class="feature-item materials">
           <p>Материалы</p>
           <a href="#">На любой вкус</a>
-          <!-- TODO: Разобраться, как сделать текст непрозрачным, не используя rgba-->
         </li>
         <li class="feature-item tool">
           <p>Инструмент</p>
@@ -126,7 +125,7 @@
             32500 Р.
           </p>
           <a href="#">
-            <p class="new-price">25500 Р.</p>
+            <p class="new-price button">25500 Р.</p>
           </a>
         </li>
         <li class="perforators-list-item new">
@@ -146,7 +145,7 @@
             22500 Р.
           </p>
           <a href="#">
-            <p class="new-price">15500 Р.</p>
+            <p class="new-price button">15500 Р.</p>
           </a>
         </li>
         <li class="perforators-list-item">
@@ -166,7 +165,7 @@
             30500 Р.
           </p>
           <a href="#">
-            <p class="new-price">25500 Р.</p>
+            <p class="new-price button">25500 Р.</p>
           </a>
         </li>
         <li class="perforators-list-item new">
@@ -184,7 +183,7 @@
           </h3>
           <p class="old-price"></p>
           <a href="#">
-            <p class="new-price">12500 Р.</p>
+            <p class="new-price button">12500 Р.</p>
           </a>
         </li>
 
@@ -288,10 +287,10 @@
           <p>
             Вы можете забрать товар сами, <br> заехав в наш офис:
           </p>
-          <a href="https://yandex.ru/maps">
+          <a class="map-popup-open" href="https://yandex.ru/maps">
             <img src="img/map-mini.jpg" width="300" height="158" alt="Карта">
           </a>
-          <a class="button" href="#">Заблудились? Напишите нам!</a>
+          <a class="button feedback-form-open" href="#">Заблудились? Напишите нам!</a>
         </div>
       </div>
     </section>
@@ -371,7 +370,6 @@
   </footer>
 
   <section class="modal feedback-form">
-    <!--TODO: Разобраться, как открыть окно-->
     <div class="wrapper-feedback-form ">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="https://echo.htmlacademy.ru/courses" method="GET">
@@ -385,28 +383,19 @@
             id="message-field" placeholder="В свободной форме"></textarea></label>
         <input class="button feedback-submit" type="submit" value="Отправить">
       </form>
-      <!-- TODO: Сделать рабочей кнопку Закрыть -->
       <button class="feedback-form-button-close" aria-label="Закрыть"></button>
     </div>
   </section>
 
-  <section class="modal map-popup ">
+  <section class="modal map-popup">
     <div class="wrapper-map-popup">
       <h2 class="visually-hidden">Карта</h2>
-      <!-- <div style="position:relative;overflow:hidden;"><a
-          href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
-          style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a
-          href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&utm_medium=mapframe&utm_source=maps&z=16.67"
-          style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 —
-          Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~BGAWtB" width="943" height="449"
-          frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div> -->
-      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586849!2d30.32085335195471!3d59.93871648178725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603357780396!5m2!1sru!2sru" width="943" height="449" frameborder="0" style="border:0;" allowfullscreen title="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" aria-hidden="false" tabindex="0"></iframe> -->
       <img src="img/map.png" width="943" height="449" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <!-- TODO: Сделать рабочей кнопку Закрыть -->
       <button class="map-popup-button-close " aria-label="Закрыть"></button>
     </div>
 
   </section>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
