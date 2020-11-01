@@ -18,7 +18,7 @@
     <div class="top-menu-wrapper">
       <div class="top-menu">
         <a class="main-header-logo" href="#">
-          <img src="img/logo-technomart.svg" alt="Техномарт" width="108px" height="18px">
+          <img src="img/logo-technomart.svg" alt="Техномарт" width="108" height="18">
         </a>
         <form class="top-menu-link form-input-search">
           <input class="input-search" type="text" name="search" placeholder="Поиск:">
@@ -390,12 +390,19 @@
   <section class="modal map-popup">
     <div class="wrapper-map-popup">
       <h2 class="visually-hidden">Карта</h2>
-      <img src="img/map.png" width="943" height="449" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <!-- <img src="img/map.png" width="943" height="449" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> -->
+      <div style="position:relative;overflow:hidden;">
+        <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
+        <a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323118%2C59.938635&utm_medium=mapframe&utm_source=maps&z=16.89"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 —
+          Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQ~z2Tm~C" width="943" height="449"
+          allowfullscreen style="position:relative;"></iframe></div>
       <button class="map-popup-button-close " aria-label="Закрыть"></button>
     </div>
 
   </section>
-  <script src="js/index.js"></script>
+  <script src="js/style.js"></script>
 </body>
 
 </html>
