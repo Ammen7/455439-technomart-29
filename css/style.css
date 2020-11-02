@@ -1886,6 +1886,11 @@ img {
   background-repeat: no-repeat;
 }
 
+.sort-active::before {
+  -webkit-filter: none;
+  filter: none;
+}
+
 .sort-button-increase:hover::before, .sort-button-increase:focus::before {
   -webkit-filter: brightness(0) grayscale(1) opacity(1);
   filter: brightness(0) grayscale(1) opacity(1);
