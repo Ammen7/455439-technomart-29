@@ -68,12 +68,19 @@ feedbackForm.addEventListener('submit', function (evt) {
 const cartPopup = document.querySelector('.cart-popup');
 const cartButtonClose = document.querySelector('.cart-popup-button-close');
 const cartButtonContinue = document.querySelector('.cart-popup-continue');
-const cartButtonOpenList = document.querySelector('.popup-button-buy');
+const cartButtonOpenList = document.querySelectorAll('.popup-button-buy');
 
-cartButtonOpenList.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.add('show');
-});
+for (i = 0; i < cartButtonOpenList.length; i++) {
+  cartButtonOpenList[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.add('show');
+  });
+}
+
+// cartButtonOpenList.forEach.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   cartPopup.classList.add('show');
+// });
 
 cartButtonClose.addEventListener("click", function (evt) {
   evt.preventDefault();

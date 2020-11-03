@@ -339,6 +339,7 @@ img {
   height: 45px;
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   padding-left: 72px;
   padding-right: 41px;
@@ -391,13 +392,14 @@ img {
 .logined {
   position: relative;
   width: 299px;
-  height: 70px;
+  min-height: 70px;
   flex-direction: column;
   margin: 0;
 }
 
 .login-link, .registration-link {
   display: inline-block;
+  vertical-align: middle;
   background-color: var(--white);
   font-family: Cuprum;
   font-style: normal;
@@ -454,8 +456,8 @@ img {
 
 .login-user {
   position: relative;
-  height: 45px;
-  margin-top: 2px;
+  min-height: 45px;
+  margin-top: 7px;
   font-family: Cuprum;
   font-style: normal;
   font-weight: normal;
@@ -470,7 +472,7 @@ img {
   position: absolute;
   padding: 0;
   border: 0;
-  top: 14px;
+  top: 21px;
   right: 17px;
   width: 20px;
   height: 17px;
@@ -579,6 +581,7 @@ img {
 
 .site-navigation a {
   display: inline-block;
+  vertical-align: middle;
   height: 60px;
   font-size: 18px;
   color: var(--white);
@@ -660,6 +663,7 @@ img {
 
 .feature-item a {
   display: inline-block;
+  vertical-align: middle;
   width: 135px;
   height: 38px;
   margin-left: 23px;
@@ -834,11 +838,11 @@ img {
 }
 
 .slider-item-perforators {
-  background-image: url(../img/Slider-perforators.jpg);
+  background-image: url(../img/slider-perforators.jpg);
 }
 
 .slider-item-drills {
-  background-image: url(../img/Slider-drills.jpg);
+  background-image: url(../img/slider-drills.jpg);
 }
 
 .slider-item {
@@ -1003,6 +1007,7 @@ img {
 
 .popular-manufacturers-item a {
   display: inline-block;
+  vertical-align: middle;
   line-height: 138px;
   height: 100%;
   width: 100%;
@@ -1094,6 +1099,7 @@ img {
 
 .services-list-item a {
   display: inline-block;
+  vertical-align: middle;
   width: 218px;
   padding-left: 22px;
   font-family: Cuprum;
@@ -1182,6 +1188,7 @@ img {
 
 .service-item-credit .button {
   display: inline-block;
+  vertical-align: middle;
   width: 195px;
   height: 38px;
   text-align: center;
@@ -1345,6 +1352,7 @@ img {
 
 .main-footer-logo {
   display: inline-block;
+  vertical-align: middle;
   width: 220px;
   height: 68px;
   line-height: 76px;
@@ -1432,6 +1440,7 @@ img {
 
 .main-footer-bottom-socials a {
   display: inline-block;
+  vertical-align: middle;
   width: 41px;
   height: 41px;
   background-color: var(--special-blackenblue);
@@ -1721,6 +1730,7 @@ img {
 .breadcrumbs li {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   font-family: PT Sans;
   font-style: normal;
   font-weight: normal;
@@ -1804,6 +1814,7 @@ img {
 
 .sort h2 {
   display: inline-block;
+  vertical-align: middle;
   flex-grow: 1;
   margin: 0;
   padding-left: 19px;
@@ -2034,7 +2045,7 @@ img {
   width: 141px;
   height: 38px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   margin-left: 11px;
   padding-right: 11px;
   box-sizing: border-box;
@@ -2330,7 +2341,7 @@ img {
 }
 
 .filter-item legend {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   font-family: PT Sans;
   font-style: normal;
   font-weight: bold;
@@ -2511,7 +2522,7 @@ legend.legend-power {
   content: "";
   position: absolute;
   left: -35px;
-  top: 8px;
+  top: 10px;
   width: 25px;
   height: 26px;
   background-image: url("../img/radio-off.svg");
