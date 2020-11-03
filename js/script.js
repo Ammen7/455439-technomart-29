@@ -3,15 +3,18 @@ const mapPopup = document.querySelector('.map-popup');
 const mapButtonClose = document.querySelector('.map-popup-button-close');
 
 
-mapOpen.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.add('show');
-});
+if (mapOpen) {
 
-mapButtonClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.remove('show');
-});
+  mapOpen.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add('show');
+  });
+
+  mapButtonClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove('show');
+  });
+}
 
 const feedbackPopup = document.querySelector('.feedback-form');
 const feedbackButtonClose = document.querySelector('.feedback-form-button-close');
@@ -32,36 +35,38 @@ try {
   isStorageSupport = false;
 }
 
-feedbackButtonOpen.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  feedbackPopup.classList.add('show');
-
-  if (storageName) {
-    feedbackFieldName.value = storageName;
-  }
-
-  if (storageEmail) {
-    feedbackFieldEmail.value = storageEmail;
-  }
-
-  feedbackFieldMessage.focus();
-});
-
-feedbackButtonClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  feedbackPopup.classList.remove('show');
-});
-
-feedbackForm.addEventListener('submit', function (evt) {
-  if (!feedbackFieldName.value || !feedbackFieldEmail.value || !feedbackFieldMessage.value) {
+if (feedbackPopup) {
+  feedbackButtonOpen.addEventListener("click", function (evt) {
     evt.preventDefault();
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('name', feedbackFieldName.value);
-      localStorage.setItem('email', feedbackFieldEmail.value);
+    feedbackPopup.classList.add('show');
+
+    if (storageName) {
+      feedbackFieldName.value = storageName;
     }
-  }
-});
+
+    if (storageEmail) {
+      feedbackFieldEmail.value = storageEmail;
+    }
+
+    feedbackFieldMessage.focus();
+  });
+
+  feedbackButtonClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedbackPopup.classList.remove('show');
+  });
+
+  feedbackForm.addEventListener('submit', function (evt) {
+    if (!feedbackFieldName.value || !feedbackFieldEmail.value || !feedbackFieldMessage.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', feedbackFieldName.value);
+        localStorage.setItem('email', feedbackFieldEmail.value);
+      }
+    }
+  });
+}
 
 
 
