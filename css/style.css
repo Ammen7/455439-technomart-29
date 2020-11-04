@@ -1275,7 +1275,7 @@ img {
 .transport-item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 0px;
   width: 25px;
   height: 2px;
