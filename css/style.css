@@ -910,6 +910,7 @@ img {
   background-image: url("../img/new.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  z-index: 1;
 }
 
 .wrapper-cream-background {
@@ -1491,6 +1492,7 @@ img {
   background: linear-gradient(180deg, var(--basic-red) 0%, var(--basic-red) 7px, var(--white) 7px, var(--white) 318px, var(--special-greylight) 318px, var(--special-greylight) 100%);
   -webkit-filter: drop-shadow(0px 4px 20px --box-shadow-black-more-tranp);
   filter: drop-shadow(0px 4px 20px --box-shadow-black-more-tranp);
+  z-index: 10;
 }
 
 .wrapper-feedback-form {
@@ -1589,6 +1591,7 @@ img {
   height: 449px;
   -webkit-filter: drop-shadow(0px 4px 20px --box-shadow-black-more-tranp);
   filter: drop-shadow(0px 4px 20px --box-shadow-black-more-tranp);
+  z-index: 10;
 }
 
 .wrapper-map-popup {
@@ -2252,6 +2255,7 @@ img {
   box-shadow: 0px 4px 20px var(--box-shadow-black-more-tranp);
   border-top: 7px solid var(--basic-red);
   box-sizing: border-box;
+  z-index: 10;
 }
 
 .cart-popup p {
