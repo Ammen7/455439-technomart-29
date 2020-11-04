@@ -1686,12 +1686,12 @@ img {
 
 .catalog-wrapper {
   width: 940px;
-  height: 1289px;
+  min-height: 1289px;
   margin: 0 auto;
   margin-top: -38px;
-  margin-bottom: 59px;
+  margin-bottom: 57px;
   display: grid;
-  grid-template-rows: 18px 89px 38px 318px 318px 318px 70px;
+  grid-template-rows: 18px 89px 38px 1fr 67px;
   grid-template-columns: repeat(4, 220px);
   row-gap: 20px;
   -moz-column-gap: 20px;
@@ -2238,7 +2238,7 @@ img {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
   color: var(--basic-black);
 }
 
