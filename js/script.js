@@ -13,6 +13,15 @@ if (mapOpen) {
     evt.preventDefault();
     mapPopup.classList.remove('show');
   });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains('show')) {
+        evt.preventDefault();
+        mapPopup.classList.remove('show');
+      }
+    }
+  });
 }
 
 const feedbackPopup = document.querySelector('.feedback-form');
@@ -35,7 +44,7 @@ try {
 }
 
 if (feedbackPopup) {
-  feedbackButtonOpen.addEventListener("click", function (evt) {
+  feedbackButtonOpen.addEventListener('click', function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.add('show');
 
@@ -50,14 +59,19 @@ if (feedbackPopup) {
     feedbackFieldMessage.focus();
   });
 
-  feedbackButtonClose.addEventListener("click", function (evt) {
+  feedbackButtonClose.addEventListener('click', function (evt) {
     evt.preventDefault();
     feedbackPopup.classList.remove('show');
+    feedbackPopup.classList.remove('modal-error');
   });
 
   feedbackForm.addEventListener('submit', function (evt) {
     if (!feedbackFieldName.value || !feedbackFieldEmail.value || !feedbackFieldMessage.value) {
       evt.preventDefault();
+      feedbackPopup.classList.remove('show');
+      feedbackPopup.classList.remove('modal-error');
+      feedbackPopup.offsetWidth = feedbackPopup.offsetWidth;
+      feedbackPopup.classList.add('modal-error');
     } else {
       if (isStorageSupport) {
         localStorage.setItem('name', feedbackFieldName.value);
@@ -65,9 +79,17 @@ if (feedbackPopup) {
       }
     }
   });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      if (feedbackPopup.classList.contains('show')) {
+        evt.preventDefault();
+        feedbackPopup.classList.remove('show');
+        feedbackPopup.classList.remove('modal-error');
+      }
+    }
+  });
 }
-
-
 
 const cartPopup = document.querySelector('.cart-popup');
 const cartButtonClose = document.querySelector('.cart-popup-button-close');
@@ -81,11 +103,6 @@ for (i = 0; i < cartButtonOpenList.length; i++) {
   });
 }
 
-// cartButtonOpenList.forEach.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   cartPopup.classList.add('show');
-// });
-
 cartButtonClose.addEventListener('click', function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove('show');
@@ -94,4 +111,13 @@ cartButtonClose.addEventListener('click', function (evt) {
 cartButtonContinue.addEventListener('click', function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove('show');
+});
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    if (cartPopup.classList.contains('show')) {
+      evt.preventDefault();
+      cartPopup.classList.remove('show');
+    }
+  }
 });
