@@ -2,7 +2,6 @@ const mapOpen = document.querySelector('.map-popup-open');
 const mapPopup = document.querySelector('.map-popup');
 const mapButtonClose = document.querySelector('.map-popup-button-close');
 
-
 if (mapOpen) {
 
   mapOpen.addEventListener("click", function (evt) {
