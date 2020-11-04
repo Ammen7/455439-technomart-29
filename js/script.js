@@ -4,12 +4,12 @@ const mapButtonClose = document.querySelector('.map-popup-button-close');
 
 if (mapOpen) {
 
-  mapOpen.addEventListener("click", function (evt) {
+  mapOpen.addEventListener('click', function (evt) {
     evt.preventDefault();
     mapPopup.classList.add('show');
   });
 
-  mapButtonClose.addEventListener("click", function (evt) {
+  mapButtonClose.addEventListener('click', function (evt) {
     evt.preventDefault();
     mapPopup.classList.remove('show');
   });
@@ -24,8 +24,8 @@ const feedbackFieldMessage = document.querySelector('[name = message]');
 const feedbackForm = document.querySelector('.feedback-form form');
 
 let isStorageSupport = true;
-let storageName = "";
-let storageEmail = "";
+let storageName = '';
+let storageEmail = '';
 
 try {
   storageName = localStorage.getItem('name');
@@ -75,7 +75,7 @@ const cartButtonContinue = document.querySelector('.cart-popup-continue');
 const cartButtonOpenList = document.querySelectorAll('.popup-button-buy');
 
 for (i = 0; i < cartButtonOpenList.length; i++) {
-  cartButtonOpenList[i].addEventListener("click", function (evt) {
+  cartButtonOpenList[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     cartPopup.classList.add('show');
   });
@@ -86,12 +86,12 @@ for (i = 0; i < cartButtonOpenList.length; i++) {
 //   cartPopup.classList.add('show');
 // });
 
-cartButtonClose.addEventListener("click", function (evt) {
+cartButtonClose.addEventListener('click', function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove('show');
 });
 
-cartButtonContinue.addEventListener("click", function (evt) {
+cartButtonContinue.addEventListener('click', function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove('show');
 });
